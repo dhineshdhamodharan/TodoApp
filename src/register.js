@@ -74,7 +74,7 @@ function Register() {
                     onChange={(e) => setConfirmpassword(e.target.value)}
                   />
                   <label for="floatingPassword" importent>
-                    confirm Password
+                    Confirm Password
                   </label>
                 </div>
 
