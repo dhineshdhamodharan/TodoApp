@@ -3,6 +3,7 @@ import Todolist from "./todolist";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./login";
 import Register from "./register";
+import { Redirect } from "react-router";
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/login">
           <Login />
+          <Redirect from="/" to="login" />
         </Route>
       </Switch>
       <Switch>

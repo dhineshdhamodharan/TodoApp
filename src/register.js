@@ -6,16 +6,16 @@ import env from "./settings.js";
 function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [confrimpassword, setConfirmpassword] = useState("");
+  const [confirmpassword, setConfirmpassword] = useState("");
   const history = useHistory();
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log({ username, password, confrimpassword });
+      console.log({ username, password, confirmpassword });
       await axios.post(`${env.api}/register`, {
         username,
         password,
-        confrimpassword,
+        confirmpassword,
       });
       history.push("/login");
     } catch (error) {
@@ -70,11 +70,11 @@ function Register() {
                     class="form-control"
                     id="floatingPassword"
                     placeholder="Password"
-                    value={confrimpassword}
+                    value={confirmpassword}
                     onChange={(e) => setConfirmpassword(e.target.value)}
                   />
                   <label for="floatingPassword" importent>
-                    Confrim Password
+                    confirm Password
                   </label>
                 </div>
 

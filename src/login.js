@@ -22,6 +22,10 @@ function Login() {
       console.log(error);
     }
   };
+
+  let onClick = (e) => {
+    history.push("/register");
+  };
   return (
     <div className="container">
       <div className="row">
@@ -65,15 +69,19 @@ function Login() {
                   <label for="floatingPassword">Password</label>
                 </div>
 
-                <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me" /> Remember me
-                  </label>
-                </div>
                 <input
                   class="w-100 btn btn-lg btn-primary"
                   type="submit"
                   value=" Sign in"
+                />
+                <p classname="font">
+                  Already registered user? or Register here
+                </p>
+                <input
+                  class="w-100 btn btn-lg btn btn-success"
+                  type="submit"
+                  value=" Register account"
+                  onClick={(e) => onClick(e)}
                 />
                 <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
               </form>
