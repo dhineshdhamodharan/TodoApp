@@ -15,7 +15,6 @@ function App() {
       <Switch>
         <Route path="/login">
           <Login />
-          <Redirect from="/" to="login" />
         </Route>
       </Switch>
       <Switch>
@@ -23,6 +22,7 @@ function App() {
           <Register />
         </Route>
       </Switch>
+      <Redirect from="/" to="/login" />
     </Router>
   );
 }
